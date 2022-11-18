@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: hsl(185, 41%, 84%);
+  width: 375px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input::placeholder {
+  color: #9ebbbd;
+}
+
+input:focus {
+  border: 2px solid #26C2AE;
+}
+
+.tips {
+  background: #00474b;
   color: white;
+  padding: 6px 17px;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.tips:hover {
+  background: #26c2ae;
+  color: #00474b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tips:active {
+  background: #9FE8DF;
+}
+
+#active-tip {
+  background: #26c2ae;
+  color: #00474b;
+}
+
+.buttons-num {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.amount-total {
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.person {
+  color: #7f9d9f;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+@media screen and (min-width: 930px) {
+  body {
+    width: 920px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .tips {
+    padding: 6px 14px;
   }
+
 }
